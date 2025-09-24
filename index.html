@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你的姓名 - 学术主页</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>你的姓名</h1>
+            </div>
+            <nav class="nav-links">
+                <a href="#bio">简历</a>
+                <a href="#interests">研究</a>
+                <a href="#publications">论文</a>
+                <a href="#projects">其他</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="content-wrapper">
+            <!-- 左侧边栏 -->
+            <aside class="sidebar">
+                <div class="profile-section">
+                    <img src="https://via.placeholder.com/200x200/4F46E5/FFFFFF?text=你的照片" alt="你的照片" class="profile-image">
+                    <h2>你的姓名</h2>
+                    <p class="motto">保持积极！</p>
+                </div>
+                
+                <div class="contact-section">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>你的城市, 中国</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-university"></i>
+                        <span>你的大学</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>your.email@example.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-twitter"></i>
+                        <span>@yourusername</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>yourusername</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 右侧主要内容 -->
+            <section class="main-content">
+                <!-- 当前状态 -->
+                <div class="content-section">
+                    <h3>当前状态</h3>
+                    <p><em>我正在寻找机器学习方向的博士职位。</em></p>
+                </div>
+
+                <!-- 个人简介 -->
+                <div id="bio" class="content-section">
+                    <h3>个人简介</h3>
+                    <p>我是你的姓名，某大学某学院的一名研究生/博士生，主修[专业名称]。</p>
+                    <p>我的主要研究兴趣包括对抗鲁棒性、图挖掘、联邦学习、差分隐私及其交叉领域。</p>
+                </div>
+
+                <!-- 教育背景 -->
+                <div class="content-section">
+                    <h3>教育背景</h3>
+                    <ul>
+                        <li>2019年9月 — 2023年6月：数学分析学士学位，某大学少年班（预计）</li>
+                        <li>2016年9月 — 2019年6月：某中学</li>
+                    </ul>
+                </div>
+
+                <!-- 荣誉奖项 -->
+                <div class="content-section">
+                    <h3>荣誉奖项</h3>
+                    <ul>
+                        <li>优秀新生奖学金 <strong>前5%</strong> 2019</li>
+                        <li>优秀本科生奖学金，金奖 <strong>前3%</strong> 2020</li>
+                        <li>优秀本科生奖学金，铜奖 <strong>前10%</strong> 2022, 2021</li>
+                        <li>国家励志奖学金 <strong>前5%</strong> 2022, 2021, 2019</li>
+                    </ul>
+                </div>
+
+                <!-- 研究兴趣 -->
+                <div id="interests" class="content-section">
+                    <h3>研究兴趣</h3>
+                    <ul>
+                        <li>机器学习与深度学习</li>
+                        <li>对抗鲁棒性</li>
+                        <li>图挖掘与图神经网络</li>
+                        <li>联邦学习</li>
+                        <li>差分隐私</li>
+                    </ul>
+                </div>
+
+                <!-- 发表论文 -->
+                <div id="publications" class="content-section">
+                    <h3>发表论文</h3>
+                    <div class="publication-list">
+                        <div class="publication-item">
+                            <h4>论文标题示例</h4>
+                            <p class="authors">作者1, 作者2, <strong>你的姓名</strong>, 作者4</p>
+                            <p class="venue">期刊/会议名称, 2024</p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">代码</a>
+                                <a href="#" class="pub-link">引用</a>
+                            </div>
+                        </div>
+                        <div class="publication-item">
+                            <h4>另一篇论文标题</h4>
+                            <p class="authors">作者1, <strong>你的姓名</strong>, 作者3</p>
+                            <p class="venue">国际会议名称, 2023</p>
+                            <div class="publication-links">
+                                <a href="#" class="pub-link">PDF</a>
+                                <a href="#" class="pub-link">代码</a>
+                                <a href="#" class="pub-link">引用</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目经历 -->
+                <div id="projects" class="content-section">
+                    <h3>项目经历</h3>
+                    <div class="project-list">
+                        <div class="project-item">
+                            <h4>项目名称</h4>
+                            <p class="project-period">2023年1月 — 2023年12月</p>
+                            <p>项目描述...</p>
+                        </div>
+                        <div class="project-item">
+                            <h4>另一个项目</h4>
+                            <p class="project-period">2022年6月 — 2022年12月</p>
+                            <p>项目描述...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+# GitHub Pages Jekyll 配置
+title: "你的学术主页"
+description: "个人学术主页 - 展示研究、论文和教学经历"
+author: "你的姓名"
+email: "your.email@example.com"
+
+# 社交链接
+social:
+  github: "yourusername"
+  twitter: "yourusername"
+  linkedin: "yourprofile"
+  scholar: "YOUR_SCHOLAR_ID"
+
+# 导航菜单
+navigation:
+  - title: "关于我"
+    url: "#about"
+  - title: "研究"
+    url: "#research"
+  - title: "论文"
+    url: "#publications"
+  - title: "教学"
+    url: "#teaching"
+  - title: "联系"
+    url: "#contact"
+
+# Jekyll 设置
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# 排除文件
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# 包含文件
+include:
+  - _pages
+
+# 默认布局
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# 构建设置
+sass:
+  sass_dir: _sass
+  style: compressed
