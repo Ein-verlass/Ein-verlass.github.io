@@ -28,6 +28,13 @@ body {
     border-bottom: 1px solid #e5e5e5;
     padding: 20px 0;
     margin-bottom: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .header .container {
@@ -66,37 +73,54 @@ body {
     padding-bottom: 2px;
 }
 
-/* 主要内容布局 */
+/* 主要内容布局 - 重新设计为左中右结构 */
 .content-wrapper {
     display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 50px;
+    grid-template-columns: 25% 60% 15%;
+    gap: 0;
     align-items: start;
+    margin-top: 100px; /* 为固定导航栏留出空间 */
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
 }
 
-/* 左侧边栏 */
+/* 左侧边栏 - 个人信息 */
 .sidebar {
     position: sticky;
-    top: 100px;
+    top: 120px;
+    padding-right: 40px;
+}
+
+/* 中间主要内容区域 */
+.main-content {
+    max-width: none;
+    margin-left: 0;
+}
+
+/* 右侧空白区域 */
+.main-right {
+    padding-left: 40px;
 }
 
 .profile-section {
-    text-align: center;
+    text-align: left; /* 改为左对齐，更像图2的风格 */
     margin-bottom: 30px;
 }
 
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     object-fit: cover;
 }
 
 .profile-section h2 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     color: #333;
 }
 
@@ -108,26 +132,27 @@ body {
 }
 
 .contact-section {
-    padding-left: 10px;
+    padding-left: 0;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     font-size: 14px;
     color: #666;
 }
 
 .contact-item i {
-    width: 16px;
-    margin-right: 10px;
+    width: 18px;
+    margin-right: 12px;
     color: #666;
+    font-size: 16px;
 }
 
 /* 右侧主要内容 */
 .main-content {
-    max-width: 600px;
+    margin-left: 0;
 }
 
 .content-section {
@@ -175,58 +200,87 @@ body {
     margin-left: -1em;
 }
 
-/* 论文列表 */
-.publication-list {
+/* Research列表 */
+.research-list {
     margin-top: 15px;
 }
 
-.publication-item {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
+.research-item {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
     border-bottom: 1px solid #f0f0f0;
 }
 
-.publication-item:last-child {
+.research-item:last-child {
     border-bottom: none;
 }
 
-.publication-item h4 {
+.research-teaser {
+    flex-shrink: 0;
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+    border: 1px solid #e5e5e5;
+}
+
+.research-teaser img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.research-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.research-content h4 {
     font-size: 16px;
     font-weight: 600;
     color: #333;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.research-content .authors {
+    font-size: 14px;
+    color: #666;
     margin-bottom: 5px;
 }
 
-.publication-item .authors {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 3px;
-}
-
-.publication-item .venue {
+.research-content .venue {
     font-size: 14px;
     color: #0066cc;
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
-.publication-links {
+.research-links {
     display: flex;
     gap: 10px;
     margin-top: 8px;
 }
 
-.pub-link {
+.research-link {
     font-size: 12px;
     color: #0066cc;
     text-decoration: none;
-    padding: 3px 8px;
+    padding: 5px 12px;
     border: 1px solid #0066cc;
-    border-radius: 3px;
+    border-radius: 4px;
     transition: all 0.2s ease;
+    background-color: white;
 }
 
-.pub-link:hover {
+.research-link:hover {
     background-color: #0066cc;
     color: white;
 }
@@ -271,6 +325,10 @@ body {
         padding: 0 15px;
     }
     
+    .header {
+        padding: 15px 0; /* 移动端减少导航栏高度 */
+    }
+    
     .header .container {
         flex-direction: column;
         gap: 15px;
@@ -284,15 +342,26 @@ body {
     .content-wrapper {
         grid-template-columns: 1fr;
         gap: 30px;
+        margin-top: 80px; /* 移动端减少顶部间距 */
+        padding: 0 15px;
     }
     
     .sidebar {
         position: static;
         order: 2;
+        padding-right: 0;
+    }
+    
+    .main-right {
+        display: none; /* 移动端隐藏右侧空白区域 */
     }
     
     .main-content {
         order: 1;
+    }
+    
+    .profile-section {
+        text-align: center;
     }
     
     .profile-image {
@@ -303,6 +372,17 @@ body {
     .contact-section {
         padding-left: 0;
         text-align: center;
+    }
+    
+    .research-item {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .research-teaser {
+        width: 270px;
+        height: 180px; /* 3:2 比例 */
+        align-self: center;
     }
 }
 

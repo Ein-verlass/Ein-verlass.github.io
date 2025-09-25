@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 更新活动导航项
     initActiveNavItem();
+    
+    // 动态加载论文信息
+    loadPapers();
 });
 
 // 平滑滚动导航
@@ -69,4 +72,81 @@ function initActiveNavItem() {
             }
         });
     });
+}
+
+// 动态加载论文信息
+async function loadPapers() {
+    try {
+        // 使用相对路径，避免CORS问题
+        const response = await fetch('./papers.json');
+        const data = await response.json();
+        
+        const researchList = document.querySelector('.research-list');
+        if (!researchList) return;
+        
+        // 清空现有内容
+        researchList.innerHTML = '';
+        
+        // 按年份和会议排序（最新的在前）
+        const sortedPapers = data.papers.sort((a, b) => {
+            if (a.year !== b.year) return b.year - a.year;
+            return a.conference.localeCompare(b.conference);
+        });
+        
+        // 生成每个论文的HTML
+        sortedPapers.forEach(paper => {
+            const paperElement = createPaperElement(paper);
+            researchList.appendChild(paperElement);
+        });
+        
+    } catch (error) {
+        console.error('Error loading papers:', error);
+        // 如果加载失败，显示错误信息
+        const researchList = document.querySelector('.research-list');
+        if (researchList) {
+            researchList.innerHTML = '<p style="color: #666; font-style: italic;">论文信息加载中...</p>';
+        }
+    }
+}
+
+// 创建单个论文的HTML元素
+function createPaperElement(paper) {
+    const researchItem = document.createElement('div');
+    researchItem.className = 'research-item';
+    
+    // 格式化作者列表，加粗自己的名字
+    const authorsHtml = paper.authors.map(author => {
+        if (author === 'Mingyang Su') {
+            return `<strong>${author}</strong>`;
+        }
+        return author;
+    }).join(', ');
+    
+    // 生成状态文本
+    let statusText = `${paper.conference} '${paper.year.toString().slice(-2)}`;
+    if (paper.status === 'accepted') {
+        statusText += ' (Accepted)';
+    }
+    
+    // 生成链接按钮
+    let linksHtml = `<a href="${paper.pdf_path}" class="research-link">PDF</a>`;
+    if (paper.published && paper.official_link) {
+        linksHtml += `<a href="${paper.official_link}" class="research-link">链接</a>`;
+    }
+    
+    researchItem.innerHTML = `
+        <div class="research-teaser">
+            <img src="${paper.teaser_image}" alt="${paper.title} Teaser">
+        </div>
+        <div class="research-content">
+            <h4>${paper.title}</h4>
+            <p class="authors">${authorsHtml}</p>
+            <p class="venue">${statusText}</p>
+            <div class="research-links">
+                ${linksHtml}
+            </div>
+        </div>
+    `;
+    
+    return researchItem;
 }

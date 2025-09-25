@@ -1,0 +1,92 @@
+{
+  "papers": [
+    {
+      "id": "mm25_simviews",
+      "title": "SimViews: An Interactive Multi-Agent System Simulating Visitor-to-Visitor Conversational Patterns to Present Diverse Perspectives of Artifacts in Virtual Museums",
+      "authors": [
+        "Mingyang Su",
+        "Chao LIU",
+        "Jingling Zhang",
+        "WU Shuang",
+        "Mingming Fan"
+      ],
+      "conference": "MM",
+      "year": 2025,
+      "status": "accepted",
+      "published": false,
+      "official_link": "",
+      "folder": "MM25_SimViews",
+      "teaser_image": "Papers/MM25_SimViews/teaser.jpg",
+      "pdf_path": "Papers/MM25_SimViews/paper.pdf"
+    },
+    {
+      "id": "chi25_simulate",
+      "title": "Toward Enabling Natural Conversation with Older Adults via the Design of LLM-Powered Voice Agents that Support Interruptions and Backchannels",
+      "authors": [
+        "Chao Liu",
+        "Mingyang Su",
+        "Yan Xiang",
+        "Yuru Huang",
+        "Yiqian Yang",
+        "Kang Zhang",
+        "Mingming Fan"
+      ],
+      "conference": "CHI",
+      "year": 2025,
+      "status": "published",
+      "published": true,
+      "official_link": "https://dl.acm.org/doi/abs/10.1145/3706598.3714228",
+      "folder": "CHI25_Simulate",
+      "teaser_image": "Papers/CHI25_Simulate/teaser.jpg",
+      "pdf_path": "Papers/CHI25_Simulate/paper.pdf"
+    },
+    {
+      "id": "sa23_digital",
+      "title": "Digital Transformation of Ethnic Dance Heritage: A Multimodal Interactive Game to Balance Instructional and Cultural Essence",
+      "authors": [
+        "Mingyang Su",
+        "Yun Xie",
+        "FeiFei Wu",
+        "Ke Fang",
+        "XiaoMei Nie",
+        "Xiu L"
+      ],
+      "conference": "SIGGRAPH Asia",
+      "year": 2023,
+      "status": "published",
+      "published": true,
+      "official_link": "https://dl.acm.org/doi/abs/10.1145/3610542.3640769",
+      "folder": "SA23_Digital",
+      "teaser_image": "Papers/SA23_Digital/teaser.png",
+      "pdf_path": "Papers/SA23_Digital/paper.pdf"
+    },
+    {
+      "id": "chich25_embodied",
+      "title": "Embodied Dance in Folk Cultural Space: Immersive Folk Dance Teaching Application to Enhance Cultural Experience",
+      "authors": [
+        "Mingyang Su",
+        "Yun Xie",
+        "Binlin Feng",
+        "Wen Ku",
+        "Chao Liu",
+        "Xiaomei Nie",
+        "XiuLi"
+      ],
+      "conference": "ChineseCHI",
+      "year": 2024,
+      "status": "accepted",
+      "published": false,
+      "official_link": "",
+      "folder": "Chinese CHI25_Embodied",
+      "teaser_image": "Papers/Chinese CHI25_Embodied/teaser.png",
+      "pdf_path": "Papers/Chinese CHI25_Embodied/paper.pdf"
+    }
+  ],
+  "metadata": {
+    "last_updated": "2024-12-19",
+    "total_papers": 4,
+    "published_papers": 2,
+    "accepted_papers": 1,
+    "submitted_papers": 1
+  }
+}
