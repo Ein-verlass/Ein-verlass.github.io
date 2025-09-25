@@ -15,6 +15,7 @@
       "year": 2025,
       "status": "accepted",
       "published": false,
+      "is_poster": false,
       "official_link": "",
       "folder": "MM25_SimViews",
       "teaser_image": "Papers/MM25_SimViews/teaser.jpg",
@@ -37,6 +38,7 @@
       "year": 2025,
       "status": "published",
       "published": true,
+      "is_poster": false,
       "official_link": "https://dl.acm.org/doi/abs/10.1145/3706598.3714228",
       "folder": "CHI25_Simulate",
       "teaser_image": "Papers/CHI25_Simulate/teaser.jpg",
@@ -44,27 +46,6 @@
     },
     {
       "index": 3,
-      "id": "sa23_digital",
-      "title": "Digital Transformation of Ethnic Dance Heritage: A Multimodal Interactive Game to Balance Instructional and Cultural Essence",
-      "authors": [
-        "Mingyang Su",
-        "Yun Xie",
-        "FeiFei Wu",
-        "Ke Fang",
-        "XiaoMei Nie",
-        "Xiu L"
-      ],
-      "conference": "SIGGRAPH Asia",
-      "year": 2023,
-      "status": "published",
-      "published": true,
-      "official_link": "https://dl.acm.org/doi/abs/10.1145/3610542.3640769",
-      "folder": "SA23_Digital",
-      "teaser_image": "Papers/SA23_Digital/teaser.png",
-      "pdf_path": "Papers/SA23_Digital/paper.pdf"
-    },
-    {
-      "index": 4,
       "id": "chich25_embodied",
       "title": "Embodied Dance in Folk Cultural Space: Immersive Folk Dance Teaching Application to Enhance Cultural Experience",
       "authors": [
@@ -80,11 +61,35 @@
       "year": 2024,
       "status": "accepted",
       "published": false,
+      "is_poster": false,
       "official_link": "",
       "folder": "Chinese CHI25_Embodied",
       "teaser_image": "Papers/Chinese CHI25_Embodied/teaser.png",
       "pdf_path": "Papers/Chinese CHI25_Embodied/paper.pdf"
+    },
+    {
+      "index": 4,
+      "id": "sa23_digital",
+      "title": "Digital Transformation of Ethnic Dance Heritage: A Multimodal Interactive Game to Balance Instructional and Cultural Essence",
+      "authors": [
+        "Mingyang Su",
+        "Yun Xie",
+        "FeiFei Wu",
+        "Ke Fang",
+        "XiaoMei Nie",
+        "Xiu L"
+      ],
+      "conference": "SIGGRAPH Asia",
+      "year": 2023,
+      "status": "published",
+      "published": true,
+      "is_poster": true,
+      "official_link": "https://dl.acm.org/doi/abs/10.1145/3610542.3640769",
+      "folder": "SA23_Digital",
+      "teaser_image": "Papers/SA23_Digital/teaser.png",
+      "pdf_path": "Papers/SA23_Digital/paper.pdf"
     }
+
   ],
   "metadata": {
     "last_updated": "2024-12-19",

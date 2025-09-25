@@ -123,6 +123,9 @@ function createPaperElement(paper) {
     
     // 生成状态文本
     let statusText = `${paper.conference} '${paper.year.toString().slice(-2)}`;
+    if (paper.is_poster) {
+        statusText += ' Poster';
+    }
     if (paper.status === 'accepted') {
         statusText += ' (Accepted)';
     }
