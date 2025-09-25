@@ -39,8 +39,10 @@ body {
 
 .header .container {
     display: flex;
-    justify-content: space-between;
+    margin-left: 0px;
+    justify-content: flex-start;
     align-items: center;
+    gap: 40px;
 }
 
 .nav-brand h1 {
