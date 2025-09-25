@@ -155,9 +155,15 @@ body {
 }
 
 .content-section li {
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     color: #555;
-    line-height: 1.5;
+    line-height: 1.6;
+}
+
+.content-section li em {
+    color: #666;
+    font-style: italic;
+    font-size: 0.95em;
 }
 
 .content-section li::before {
