@@ -285,6 +285,57 @@ body {
     color: white;
 }
 
+/* Publication List样式 */
+.publication-list p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #555;
+}
+
+.publication-list p strong {
+    color: #333;
+}
+
+.publication-list p em {
+    font-style: italic;
+    color: #444;
+}
+
+/* 工作经历列表 */
+.work-list {
+    margin-top: 15px;
+}
+
+.work-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.work-item:last-child {
+    border-bottom: none;
+}
+
+.work-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.work-period {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.work-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 0;
+}
+
 /* 项目列表 */
 .project-list {
     margin-top: 15px;
