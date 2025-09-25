@@ -87,10 +87,9 @@ async function loadPapers() {
         // 清空现有内容
         researchList.innerHTML = '';
         
-        // 按年份和会议排序（最新的在前）
+        // 按index排序（小的在前面）
         const sortedPapers = data.papers.sort((a, b) => {
-            if (a.year !== b.year) return b.year - a.year;
-            return a.conference.localeCompare(b.conference);
+            return a.index - b.index;
         });
         
         // 生成每个论文的HTML

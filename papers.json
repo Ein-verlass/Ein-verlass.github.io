@@ -1,6 +1,7 @@
 {
   "papers": [
     {
+      "index": 1,
       "id": "mm25_simviews",
       "title": "SimViews: An Interactive Multi-Agent System Simulating Visitor-to-Visitor Conversational Patterns to Present Diverse Perspectives of Artifacts in Virtual Museums",
       "authors": [
@@ -20,6 +21,7 @@
       "pdf_path": "Papers/MM25_SimViews/paper.pdf"
     },
     {
+      "index": 2,
       "id": "chi25_simulate",
       "title": "Toward Enabling Natural Conversation with Older Adults via the Design of LLM-Powered Voice Agents that Support Interruptions and Backchannels",
       "authors": [
@@ -41,6 +43,7 @@
       "pdf_path": "Papers/CHI25_Simulate/paper.pdf"
     },
     {
+      "index": 3,
       "id": "sa23_digital",
       "title": "Digital Transformation of Ethnic Dance Heritage: A Multimodal Interactive Game to Balance Instructional and Cultural Essence",
       "authors": [
@@ -61,6 +64,7 @@
       "pdf_path": "Papers/SA23_Digital/paper.pdf"
     },
     {
+      "index": 4,
       "id": "chich25_embodied",
       "title": "Embodied Dance in Folk Cultural Space: Immersive Folk Dance Teaching Application to Enhance Cultural Experience",
       "authors": [
